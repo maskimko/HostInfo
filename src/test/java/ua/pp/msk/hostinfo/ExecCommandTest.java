@@ -5,6 +5,7 @@
  */
 package ua.pp.msk.hostinfo;
 
+import java.util.ResourceBundle;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.junit.After;
@@ -31,7 +32,13 @@ public class ExecCommandTest {
     public void testExecuteCommand() {
         System.out.println("executeCommand");
         String command = "uptime";
-        ExecCommand instance = new ExecCommand("urraco", 22, "testuser", "123456", null);
+        ResourceBundle rb = ResourceBundle.getBundle("test");
+        String testHost = rb.getString("testSSHHost");
+        int testPort = Integer.parseInt(rb.getString("testSSHPort"));
+        String testUser = rb.getString("testUser");
+        String testPassword = rb.getString("testPassword");
+        String testId = rb.getString("testIdentity");
+        ExecCommand instance = new ExecCommand(testHost, testPort, testUser, testPassword, testId);
        
         CommandReturn result = instance.executeCommand(command);
         System.out.println("Got output: " + result.getStdOut());
