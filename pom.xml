@@ -3,8 +3,16 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>ua.pp.msk</groupId>
     <artifactId>HostInfo</artifactId>
-    <version>0.0</version>
+    <version>0.1</version>
     <packaging>jar</packaging>
+    <description>Simple library for executinf shell commands over ssh</description>
+    <developers>
+        <developer>
+            <email>maskimko@ukr.net</email>
+            <name>Maksym Shkolnyi</name>
+            <id>maskimko</id>
+        </developer>
+    </developers>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.6</maven.compiler.source>
